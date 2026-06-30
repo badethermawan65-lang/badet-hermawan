@@ -1,0 +1,792 @@
+/* ===============================
+   GOOGLE FONT
+=================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===============================
+   RESET
+=================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d1117;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ===============================
+   LOADER
+=================================*/
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.spinner{
+    width:70px;
+    height:70px;
+    border:7px solid #333;
+    border-top:7px solid #ff2d55;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* ===============================
+   HEADER
+=================================*/
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(12px);
+}
+
+nav{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#ff2d55;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    transition:.3s;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#ff2d55;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* ===============================
+   HOME
+=================================*/
+
+.home{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:90%;
+    margin:auto;
+    gap:50px;
+    padding-top:120px;
+}
+
+.home .content{
+    flex:1;
+}
+
+.home h3{
+    color:#ff2d55;
+    font-size:24px;
+}
+
+.home h1{
+    font-size:60px;
+    margin:10px 0;
+}
+
+.home h2{
+    color:#bdbdbd;
+    margin-bottom:20px;
+}
+
+.home p{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:flex;
+    gap:20px;
+}
+
+.btn a{
+    background:#ff2d55;
+    color:white;
+    padding:14px 30px;
+    border-radius:30px;
+    transition:.4s;
+    font-weight:600;
+}
+
+.btn a:hover{
+    background:white;
+    color:#000;
+}
+
+.home .image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.home .image img{
+    width:360px;
+    height:360px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #ff2d55;
+    box-shadow:0 0 35px rgba(255,45,85,.5);
+}
+
+/* ===============================
+   TITLE
+=================================*/
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#ff2d55;
+}
+
+/* ===============================
+   ABOUT
+=================================*/
+
+.about{
+    padding:100px 10%;
+}
+
+.about-container{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.about-image{
+    flex:1;
+    text-align:center;
+}
+
+.about-image img{
+    width:320px;
+    height:320px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 0 25px rgba(255,45,85,.4);
+}
+
+.about-text{
+    flex:2;
+}
+
+.about-text p{
+    line-height:1.9;
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.info div{
+    background:#161b22;
+    padding:20px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.info div:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(255,45,85,.3);
+}
+
+.info h4{
+    color:#ff2d55;
+    margin-bottom:8px;
+}
+
+/*=====================================
+    PENDIDIKAN
+=====================================*/
+
+#education{
+    padding:100px 10%;
+}
+
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.box{
+    background:#161b22;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(255,45,85,.35);
+}
+
+.box h3{
+    color:#ff2d55;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.box p{
+    color:#d8d8d8;
+    line-height:1.7;
+}
+
+/*=====================================
+    SKILL
+=====================================*/
+
+#skills{
+    padding:100px 10%;
+}
+
+.skill{
+    max-width:800px;
+    margin:auto;
+}
+
+.skill h3{
+    margin:25px 0 10px;
+}
+
+.bar{
+    width:100%;
+    height:15px;
+    background:#2d2d2d;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.bar span{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,#ff2d55,#ff6a88);
+    border-radius:20px;
+    animation:loading 2s ease;
+}
+
+@keyframes loading{
+    from{
+        width:0;
+    }
+}
+
+/*=====================================
+    CARD
+=====================================*/
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.card{
+    background:#161b22;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(255,45,85,.35);
+}
+
+.card i{
+    font-size:50px;
+    color:#ff2d55;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#cfcfcf;
+    line-height:1.7;
+}
+
+/*=====================================
+    PROYEK
+=====================================*/
+
+#project{
+    padding:100px 10%;
+}
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-box{
+    background:#161b22;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+}
+
+.project-box:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(255,45,85,.35);
+}
+
+.project-box i{
+    font-size:55px;
+    color:#ff2d55;
+    margin-bottom:20px;
+}
+
+.project-box h3{
+    margin-bottom:15px;
+}
+
+.project-box p{
+    color:#d7d7d7;
+    line-height:1.8;
+}
+
+/*=====================================
+    GALERI
+=====================================*/
+
+#gallery{
+    padding:100px 10%;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.5s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(255,45,85,.4);
+}
+
+/*=====================================
+    CITA-CITA
+=====================================*/
+
+.dream{
+    padding:100px 12%;
+    text-align:center;
+}
+
+.dream p{
+    max-width:850px;
+    margin:auto;
+    line-height:2;
+    color:#ddd;
+    font-size:18px;
+}
+
+/*=====================================
+    HOBI
+=====================================*/
+
+.hobby{
+    padding:100px 10%;
+}
+
+.hobby .card i{
+    color:#ff2d55;
+}
+
+/*=====================================
+    MOTTO
+=====================================*/
+
+.motto{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.motto blockquote{
+    max-width:900px;
+    margin:auto;
+    font-size:24px;
+    font-style:italic;
+    color:#f2f2f2;
+    line-height:1.8;
+    border-left:5px solid #ff2d55;
+    padding-left:25px;
+}
+
+/*=====================================
+    CONTACT
+=====================================*/
+
+#contact{
+    padding:100px 10%;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:40px;
+}
+
+.contact-info{
+    background:#161b22;
+    padding:35px;
+    border-radius:20px;
+}
+
+.contact-info h3{
+    color:#ff2d55;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.info-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:18px 0;
+    color:#fff;
+}
+
+.info-box i{
+    width:45px;
+    height:45px;
+    background:#ff2d55;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+}
+
+.contact-form{
+    background:#161b22;
+    padding:35px;
+    border-radius:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#222;
+    color:white;
+}
+
+.contact-form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#ff2d55;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.4s;
+}
+
+.contact-form button:hover{
+    background:white;
+    color:#111;
+}
+
+/*=====================================
+    DOWNLOAD CV
+=====================================*/
+
+.cv{
+    text-align:center;
+    padding:100px 10%;
+}
+
+.download-btn{
+    display:inline-block;
+    margin-top:30px;
+    background:#ff2d55;
+    color:white;
+    padding:15px 35px;
+    border-radius:40px;
+    transition:.4s;
+}
+
+.download-btn:hover{
+    background:white;
+    color:#111;
+}
+
+/*=====================================
+    CLOCK & CALENDAR
+=====================================*/
+
+.widget{
+    padding:100px 10%;
+}
+
+.widget-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.clock-card,
+.calendar-card{
+    background:#161b22;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+}
+
+#clock{
+    font-size:45px;
+    margin-top:20px;
+    color:#ff2d55;
+    font-weight:bold;
+}
+
+#date{
+    font-size:24px;
+    margin-top:20px;
+}
+
+/*=====================================
+    MUSIC
+=====================================*/
+
+.music{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.music audio{
+    width:100%;
+    max-width:600px;
+}
+
+/*=====================================
+    BACK TO TOP
+=====================================*/
+
+#topBtn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#ff2d55;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    transition:.4s;
+    z-index:999;
+}
+
+#topBtn:hover{
+    transform:scale(1.1);
+}
+
+/*=====================================
+    FOOTER
+=====================================*/
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h3{
+    color:#ff2d55;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#bbb;
+}
+
+.social{
+    margin:25px 0;
+}
+
+.social a{
+    width:45px;
+    height:45px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background:#161b22;
+    border-radius:50%;
+    color:white;
+    margin:0 8px;
+    transition:.4s;
+}
+
+.social a:hover{
+    background:#ff2d55;
+}
+
+.copy{
+    margin-top:20px;
+    color:#777;
+}
+
+/*=====================================
+    RESPONSIVE
+=====================================*/
+
+@media(max-width:991px){
+
+nav ul{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.home{
+flex-direction:column-reverse;
+text-align:center;
+padding-top:140px;
+}
+
+.home h1{
+font-size:45px;
+}
+
+.home .image img{
+width:280px;
+height:280px;
+}
+
+.btn{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.about-container{
+flex-direction:column;
+}
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.title{
+font-size:30px;
+}
+
+.home h1{
+font-size:34px;
+}
+
+.home h2{
+font-size:22px;
+}
+
+#clock{
+font-size:30px;
+}
+
+}
+
